@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src='js1.js'></script>
+</head>
+<body>
+  <script>
+    order = new Order();
+    let h = new Hamburger(Hamburger.SIZE_SMALL, [Hamburger.STUFFING_SALAD]);
+    let d = new Drinking(Drinking.COFFEE);
+    let s = new Salad(Salad.CAESAR, 100);
+
+    console.log(order.addItem(h));
+    console.log(order.addItem(d));
+    console.log(order.addItem(s));
+    console.log(order.calculatePrice());
+    console.log(order.deleteItem(h));
+    console.log(order.calculatePrice());
+    console.log(order.payForOrder());
+    console.log(order.addItem(h));
+  </script>
+</body>
+</html>
